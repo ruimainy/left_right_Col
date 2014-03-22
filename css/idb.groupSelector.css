@@ -1,0 +1,21 @@
+﻿*{margin: 0;padding: 0; list-style: none;}
+a{text-decoration: none;}
+.i_wrap{width:300px;margin: 10px 0;background: #fff;border:1px solid #ddd;}
+.i_wrap:after {
+  height:0;   
+  content:".";   
+  clear:both;   
+  display:block;   
+  visibility:hidden;   
+}
+.i_wrap .i_left{width:148px;height: 155px;float: left;overflow-y: auto;border-right: 1px solid #EDEDED;}
+.i_wrap .i_right{width:150px;height: 155px;float: right;overflow-y: auto;}
+.i_wrap .i_right span{color:#028ad4;}
+
+.i_wrap li{width:111px;height: 27px;margin: 5px; padding-left: 13px; line-height: 30px;}
+.i_wrap li span{float:left;width:90px;height:27px;overflow: hidden;line-height: 24px;}
+
+.i_wrap li a{float: right;width:20px;height: 27px;
+		background: url(../images/selectItem.png) no-repeat center center;
+	}
+.i_wrap li a.i_onSel{background: url(../images/removeItem.png) no-repeat center center;}

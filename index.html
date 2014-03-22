@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="js/jquery-1.7.2.js"></script>
+    <script src="js/idb.groupSelector.js"></script>
+    <link href="css/idb.groupSelector.css" rel="stylesheet" />
+<script type="text/javascript">
+    $(function () {
+        var idbColumn = null; // new 出来的新分栏对象
+
+        var config = {
+            name: 'Name',
+            typeModel: controlType._modeTwo,
+            right_h1_font: '未添加',
+            left_h1_font:'添加',
+            leftDiv: 'LeftCol',
+            rightDiv: 'rightCol'
+        };
+
+        $.ajax({
+            url: 'js/json.json',
+            dataType: 'json',
+            success: function (d) {
+                idbColumn = $('#wrap').exIdbColumn(config);
+                idbColumn.setData(d);
+            }
+        });
+    })
+</script>
+</head>
+<body>
+<div class="i_wrap" id='wrap'>
+	<!-- <div class="left" id='LeftCol'></div> -->
+	<!-- <div class="right" id='rightCol'></div> -->
+</div>
+</body>
+</html>
